@@ -7,7 +7,7 @@ entity produto{
     key ID : UUID;
     Nome : String;
     Grupo_de_Mercadorias: Integer;
-    Categoria : Integer;
+    Categoria : String;
 }
 
 
