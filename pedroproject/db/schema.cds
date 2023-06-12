@@ -1,6 +1,6 @@
 namespace pedroproject;
 
-using {temporal} from '@sap/cds/common';
+using {cuid} from '@sap/cds/common';
 
 entity filial{
     @Common.Label : 'UUID'
