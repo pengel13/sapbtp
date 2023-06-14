@@ -13,7 +13,6 @@ entity Filial{
 
 entity Items_Transacao{
     key sequencia : Integer ;
-    Filial: Association to Filial;
     Transacao : Association to Transacao;
     Produto : Association to Produto;
     ValorTotal : Decimal;
