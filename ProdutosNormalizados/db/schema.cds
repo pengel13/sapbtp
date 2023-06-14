@@ -2,11 +2,11 @@ namespace pn;
 
 entity Categoria{
     key codigoCategoria : Integer;
-    Categoria : String
+    DescricaoCategoria : String
 }
 
 entity Filial{
-    key codigoFilial : Integer;
+    key Filial : Integer;
     nomeFilial : String;
     CNPJ : Integer;
 }
@@ -14,21 +14,22 @@ entity Filial{
 entity Items_Transacao{
     @Common.Label : 'UUID'
     key sequencia : UUID;
-    fk_codigoTransacao : Association to Transacao;
-    fk_codigoProduto : Association to Produto;
-    quantidade : Integer;
-    valorTotal : Decimal;
+    Filial: Association to Filial;
+    Transacao : Association to Transacao;
+    Produto : Association to Produto;
+    ValorTotal : Decimal;
+    Quantidade : Integer;
 }
 
 entity Transacao{
     key codigoTransacao : Integer;
-    key fk_codigoFilial : Association to Filial;
+    key fk_codigo : Association to Filial;
     dataTransacao: String;
 }
 
 entity Produto{
     key codigoProduto : Integer;
-    fk_codigoCategoria : Integer;
     nomeProduto : String;
+    fk_codigoCategoria : Integer;
     ean : String(13);
 }

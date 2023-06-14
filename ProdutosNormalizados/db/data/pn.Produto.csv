@@ -1,4 +1,4 @@
-CodigoProduto,NomeProduto,CodigoCategoria
+codigoProduto,NomeProduto,fk_codigoCategoria
 2269238,Garrafa Térmica Termolar Mini Garbo Branca 250ml,638
 9659858,Alimento Para Gatos Amigo PET Peixe 500g - Caixa 22x500g,1
 2231907,Shampoo + Condicionador Pantene Hidro-cauterização 350ml + 175ml,2915

@@ -1,4 +1,4 @@
-Filial,CodigoTransacao,DataTransação
+fk_codigo_Filial,CodigoTransacao,DataTransacao
 1,222663,28/04/2022
 1,236095,30/05/2022
 1,193152,11/02/2022
