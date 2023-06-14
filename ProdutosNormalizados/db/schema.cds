@@ -12,8 +12,7 @@ entity Filial{
 }
 
 entity Items_Transacao{
-    @Common.Label : 'UUID'
-    key sequencia : UUID;
+    key sequencia : Integer ;
     Filial: Association to Filial;
     Transacao : Association to Transacao;
     Produto : Association to Produto;
