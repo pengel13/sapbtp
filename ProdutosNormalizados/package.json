@@ -22,10 +22,7 @@
     },
     "requires": {
       "db": {
-        "kind": "sql",
-        "credentials": {
-          "database": "db.sqlite"
-        }
+        "kind": "hana"
       }
     }
   }
