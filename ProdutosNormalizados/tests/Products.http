@@ -1,0 +1,20 @@
+### Submit Suppliers
+GET http://localhost:4004/pnservice/Produto?$top=2
+
+### Browse Products
+GET http://localhost:4004/pnservice/Transacao?$top=2
+
+### Browse Products - Product,Identifier ,Price
+GET http://localhost:4004/pnservice/Produto?
+&$select=codigoProduto,nomeProduto
+
+### Browse - Price, quantity and unit Price
+GET http://localhost:4004/pnservice/ItemsTransacao?
+&$select=Produto,ValorTotal,Quantidade
+
+### Submit Products
+POST http://localhost:4004/pnservice/Products
+Content-Type: application/json
+
+{"ID":"a9fe4b01-ccd3-4369-821c-291a7552dffb" 
+}

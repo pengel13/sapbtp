@@ -1,0 +1,15 @@
+-- Create the stored procedure
+
+PROCEDURE CalculatePrecoUnitario() 
+  LANGUAGE SQLSCRIPT 
+  SQL SECURITY INVOKER 
+  READS SQL DATA AS 
+BEGIN
+  SELECT sequencia,
+    Quantidade,
+    ValorTotal,
+    TRANSACAO_CODIGOTRANSACAO as Transacao,
+    PRODUTO_CODIGOPRODUTO as Produto,
+    ValorTotal / Quantidade AS PrecoUnitario
+  FROM pn_Items_Transacao;
+END 
