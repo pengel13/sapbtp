@@ -12,5 +12,6 @@ module.exports = cds.service.impl(function () {
             global.it || console.log(`< emitting: Produto trocado ${Product.ID}`)
             this.emit('prod_Change', header)
         })
+    this.on()
     })
 })

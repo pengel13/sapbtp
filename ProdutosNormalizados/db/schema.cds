@@ -15,6 +15,7 @@ entity Items_Transacao{
     key sequencia : Integer ;
     Transacao : Association to Transacao;
     Produto : Association to Produto;
+
     ValorTotal : Decimal;
     Quantidade : Integer;
 }
@@ -28,6 +29,15 @@ entity Transacao{
 entity Produto{
     key codigoProduto : Integer;
     nomeProduto : String;
-    fk_codigoCategoria : Integer;
+    fk_codigoCategoria : Association to Categoria;
     ean : String(13);
 }
+
+define view verProdutoscomCategoria as select from Produto
+ inner join Categoria on Categoria.codigoCategoria =fk_codigoCategoria{
+    Produto.codigoProduto,
+    Produto.nomeProduto,
+    Produto.fk_codigoCategoria,
+    Categoria.DescricaoCategoria,
+    Categoria.codigoCategoria
+    };
