@@ -33,11 +33,17 @@ entity Produto{
     ean : String(13);
 }
 
-define view verProdutoscomCategoria as select from Produto
- inner join Categoria on Categoria.codigoCategoria =fk_codigoCategoria{
-    Produto.codigoProduto,
-    Produto.nomeProduto,
-    Produto.fk_codigoCategoria,
-    Categoria.DescricaoCategoria,
-    Categoria.codigoCategoria
-    };
+entity OrdenacaoVendas{
+    key fk_codigoProduto: Association to Produto;
+    fk_codigoFilial : Association to Filial;
+    vendas: Integer;
+}
+
+// define view verProdutoscomCategoria as select from Produto
+//  inner join Categoria on Categoria.codigoCategoria =fk_codigoCategoria{
+//     Produto.codigoProduto,
+//     Produto.nomeProduto,
+//     Produto.fk_codigoCategoria,
+//     Categoria.DescricaoCategoria,
+//     Categoria.codigoCategoria
+//     };
